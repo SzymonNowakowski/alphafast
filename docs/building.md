@@ -1,3 +1,12 @@
+
+## TLDR
+
+To build the Docker image locally:
+
+```bash
+docker build -f docker/Dockerfile -t alphafast .
+```
+
 # Building from Source
 
 This guide covers building AlphaFast from source for development or non-containerized deployment.
