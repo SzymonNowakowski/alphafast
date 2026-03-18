@@ -49,7 +49,7 @@ Downloads and converts protein sequence databases to MMseqs2 GPU format.
 ```bash
 ./scripts/setup_databases.sh /path/to/databases
 ```
-or execute the script directly from a docker container (first execute [Step 4, building from source](docs/building.md)). Running directly from a docker container has the adventage, that the binaries are automatically exnsured to be provided.
+or execute the script directly from a docker container (first execute [Step 4, building from source](docs/building.md)). Running directly from a docker container has the adventage, that the binaries are automatically ensured to be provided. The downside is that everything gets written down as a root-owned file, so one needs to reclaim it with `sudo chown`.
 ```bash
 docker run --volume /scratch1/snowakowski/af3_databases:/root -it alphafast ./scripts/setup_databases.sh /root
 sudo chown -R snowakowski:snowakowski /scratch1/snowakowski/af3_databases/mmseqs/
