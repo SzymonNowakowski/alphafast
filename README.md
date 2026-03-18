@@ -115,20 +115,8 @@ Create a directory of input `.json` files. See [docs/input_format.md](docs/input
     --db_dir /path/to/databases \
     --weights_dir /path/to/weights
 ```
-or from a docker container:
-```bash
- docker run -it  \
-   --volume $HOME/alphafast/af_input:/root/af_input  \
-   --volume $HOME/alphafast/af_output:/root/af_output \
-   --volume $HOME/alphafold3.0.1/af3_model_params:/root/models \
-   --volume /scratch1/snowakowski/af3_databases/:/root/public_databases \
-   alphafast  \
-    ./scripts/run_alphafast.sh \
-    --input_dir /root/af_input \
-    --output_dir /root/af_output \
-    --db_dir /root/public_databases \
-    --weights_dir /root/models
-```
+**Note: the script runs internally from a docker container!**
+
 
 **Multi-GPU:**
 
