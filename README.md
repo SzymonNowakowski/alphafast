@@ -49,9 +49,10 @@ Downloads and converts protein sequence databases to MMseqs2 GPU format.
 ```bash
 ./scripts/setup_databases.sh /path/to/databases
 ```
-or directly from a docker container (first execute [Step 4, building from source](docs/building.md)). Running directly from a docker container has the adventage, that the binaries are automatically exnsured to be provided.
+or execute the script directly from a docker container (first execute [Step 4, building from source](docs/building.md)). Running directly from a docker container has the adventage, that the binaries are automatically exnsured to be provided.
 ```bash
-docker run --volume /scratch1/snowakowski/alphafast_databases:/root -it alphafast ./scripts/setup_databases.sh /root
+docker run --volume /scratch1/snowakowski/af3_databases:/root -it alphafast ./scripts/setup_databases.sh /root
+sudo chown -R snowakowski:snowakowski /scratch1/snowakowski/af3_databases/mmseqs/
 ```
 
 **Alternatively**, download pre-built databases from HuggingFace (no padded conversion necessary):
@@ -120,7 +121,7 @@ or from a docker container:
    --volume $HOME/alphafast/af_input:/root/af_input  \
    --volume $HOME/alphafast/af_output:/root/af_output \
    --volume $HOME/alphafold3.0.1/af3_model_params:/root/models \
-   --volume /scratch1/snowakowski/alphafast_databases/:/root/public_databases \
+   --volume /scratch1/snowakowski/af3_databases/:/root/public_databases \
    alphafast  \
     ./scripts/run_alphafast.sh \
     --input_dir /root/af_input \
