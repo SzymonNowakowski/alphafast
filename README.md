@@ -52,7 +52,7 @@ Downloads and converts protein sequence databases to MMseqs2 GPU format.
 or directly from a docker container (first execute [Step 4, building from source](docs/building.md)). Running directly from a docker container has the adventage, that the binaries are automatically exnsured to be provided.
 ```bash
 docker run --volume /scratch1/snowakowski/alphafast_databases:/root -it alphafast ./scripts/setup_databases.sh /root
-``
+```
 
 **Alternatively**, download pre-built databases from HuggingFace (no padded conversion necessary):
 
